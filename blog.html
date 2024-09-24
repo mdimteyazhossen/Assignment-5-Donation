@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Website</title>
+    <!-- Google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+     <!-- font awsome cdn -->
+    <script src="https://kit.fontawesome.com/ab7b3c66e1.js" crossorigin="anonymous"></script>
+    <!-- DaisyUi CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        "button-color":'rgb(180, 244, 97)',
+                        "doller-color":'rgba(17, 17, 17,0.05)',
+                        "header-background":'rgb(249, 247, 243)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+      <div class="navbar bg-base-100 fixed z-10 h-[150px] backdrop-contrast-50 bg-header-background/95  ">
+        <div class="navbar-start ml-[10%]">
+          <a href="./index.html"><button
+              id="donation-tab"
+              class="w-[200px] h-[60px] py-2 rounded-l-md focus:outline-none transition-colors duration-200  font-semibold bg-gradient-to-r text-3xl bg-button-color"
+            >
+              Home
+            </button></a>
+        </div>
+        <div class="navbar-center flex gap-5">
+          <img src="./assets/logo.png" alt="logo">
+          <h1 class="text-3xl font-bold">Donate Bangladesh</h1>
+        </div>
+        <div class="navbar-end mr-[10%]">
+          <div class="flex gap-2  p-2 rounded-xl w-full lg:w-1/4 ">
+            <img src="./assets/coin.png" alt="">
+            <p class="text-xl font-bold text-gray-800"><span id="balance">5000</span> BDT</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+        <section class="pt-[180px] w-4/5 mx-auto grid gap-1">
+          <h1 class="text-4xl lg:text-5xl font-bold my-10">Important FAQ ???</h1>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-2xl lg:text-3xl font-medium ">What is DOM methods?</div>
+                <div class="collapse-content">
+                  <p class="text-xl font-base text-left">
+ DOM methods allow <br class="lg:hidden">programmatic access to the <br class="lg:hidden"> tree. With them, you can<br class="lg:hidden"> change the document's <br class="lg:hidden">structure, style, or content.
+  Nodes can also have event <br class="lg:hidden">handlers attached to them. <br class="lg:hidden">Once an event is triggered,<br class="lg:hidden"> the event handlers get <br class="lg:hidden">executed. Dec 16, 2023</pre>
+                    
+
+                  </p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-2xl lg:text-3xl  font-medium">Which languages use DOM?</div>
+                <div class="collapse-content">
+                  <p class="text-xl font-base text-left">
+ DOM and JavaScript
+
+ That is to say, it is <br class="lg:hidden">written in JavaScript, but <br class="lg:hidden">uses the DOM to access the <br class="lg:hidden">document and its elements. <br class="lg:hidden">The DOM is not a programming 
+language, but without it, the <br class="lg:hidden">JavaScript language wouldn't <br class="lg:hidden">have any model or notion of <br class="lg:hidden">web pages, HTML documents, <br class="lg:hidden">SVG documents, 
+and their component parts. <br class="lg:hidden">Jul 25,2024
+                  </p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-2xl lg:text-3xl  font-medium">What is DOM structure?</div>
+                <div class="collapse-content">
+                  <p class="text-xl font-base text-left">
+  A Document Object Model<br class="lg:hidden"> (DOM) tree is a hierarchical<br class="lg:hidden"> representation of an HTML or <br class="lg:hidden">XML document. It consists of <br class="lg:hidden">a root node, which 
+  is the document itself, and <br class="lg:hidden">a series of child nodes that <br class="lg:hidden">represent the elements,<br class="lg:hidden"> attributes, and text content<br class="lg:hidden"> of the document.
+
+                  </p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-2xl lg:text-3xl  font-medium">How to reduce DOM size in HTML?</div>
+                <div class="collapse-content">
+                  <p class="text-xl font-base text-left">
+  Workaround for 'avoid <br class="lg:hidden"> excessive-DOM size'<br>
+
+  1. Lazy load parts of your <br class="lg:hidden">webpage. <br>
+  2. Improve page rendering <br class="lg:hidden">with content visibility. ...<br>
+  3. Split large pages into<br class="lg:hidden"> multiple pages. ...<br>
+  4. Implement infinite <br class="lg:hidden">scroll. ...<br>
+  5. Avoid memory intensive <br class="lg:hidden">JavaScript. ...<br>
+  6. Avoid complicated <br class="lg:hidden">declarations declarations.<br>
+                  </p>
+                </div>
+              </div>
+
+        </section>
+    </main>
+</body>
+</html>

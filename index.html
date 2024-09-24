@@ -4,8 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Website</title>
+    <!-- Google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+     <!-- font awsome cdn -->
+    <script src="https://kit.fontawesome.com/ab7b3c66e1.js" crossorigin="anonymous"></script>
+    <!-- DaisyUi CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        "button-color":'rgb(180, 244, 97)',
+                        "doller-color":'rgba(17, 17, 17,0.05)',
+                        "header-background":'rgb(249, 247, 243)'
+                    }
+                }
+            }
+        }
+        // module.exports = {
+        //     theme: {
+        //       extend: {
+        //         backgroundImage: {
+        //               'hero-pattern': "url('/assets/bg.jpg')",
+        //         }
+        //       }
+        //     }
+        // }
+    </script>
+    <!-- <style>
+        .roboto-thin {
+            font-family: "Roboto", sans-serif;
+        }
+        main{
+          background-color:rgba(256,256,256,0.1);
+        }
+    </style> -->
 </head>
 <body>
-    
+    <header>
+      <div class="grid justify-center gap-3 mx-auto lg:flex navbar bg-base-100 fixed z-10 lg:h-[150px] backdrop-contrast-50 bg-header-background/95">
+        <div class="text-center  navbar-start ml-[10%]">
+          <a href="./blog.html"><button
+              id="blog-tab"
+              class="w-[200px] h-[60px] py-2 rounded-l-md focus:outline-none transition-colors duration-200  font-semibold bg-gradient-to-r text-3xl bg-button-color"
+            >
+              Blog
+            </button></a>
+        </div>
+        <div class="text-center navbar-center flex gap-5">
+          <img src="./assets/logo.png" alt="logo">
+          <h1 class="text-3xl font-bold">Donate Bangladesh</h1>
+        </div>
+        <div class="text-center mx-[40px] navbar-end mr-[10%]">
+          <div class="flex gap-2  p-2 rounded-xl w-full lg:w-1/2 ">
+            <img src="./assets/coin.png" alt="">
+            <p class="text-xl lg:text-2xl font-bold text-gray-800"><span id="balance-amount">5000.00</span> BDT</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+        <!-- Tabs for Donation and History -->
+        <section class="pt-[210px] lg:pt-[180px] ">
+          <div class="flex justify-center mb-6 gap-5">
+            <button
+              id="donation-tab"
+              class="w-[200px] h-[60px] py-2 rounded-l-md focus:outline-none transition-colors duration-200  font-semibold bg-gradient-to-r text-3xl bg-button-color"
+            >
+              Donation
+            </button>
+            <button
+              id="history-tab"
+              class="w-[200px] h-[60px] py-2 text-3xl rounded-r-md focus:outline-none transition-colors duration-200 text-gray-600 font-semibold"
+            >
+              History
+            </button>
+        </div>
+        </section>
+        <!-- cards -->
+        <section class="w-full lg:w-[80%] mx-auto grid  gap-8 " id="dona">
+          <!-- Card-1 -->
+          <div class="card w-full card-side bg-base-100 shadow-xl p-8 grid lg:flex">
+            <figure class="lg:w-2/3 border-0 rounded-bl-2xl">
+              <img
+                src="./assets/noakhali.png"
+                alt="Movie"  class="w-full"/>
+            </figure>
+            <div class="card-body w-full">
+                <div class="relative grid gap-6">
+                    <div class="flex gap-2 bg-doller-color p-2 rounded-xl w-2/3 lg:w-1/4 ">
+                      <img src="./assets/coin.png" alt="">
+                      <p class="text-xl font-bold text-gray-800"><span id="balanceid1">400.00</span> BDT</p>
+                    </div>
+                    <h1 class="text-xl lg:text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="text-lg font-normal"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    <input
+                      type="number"
+                      id="donation-amount1"
+                      class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 h-[50px]"
+                      placeholder="Write Donation Amount"
+                    />
+                    <div class="card-actions justify-center">
+                      <button class="btn  w-full bg-button-color text-black text-lg font-bold" id="donateNow">Donate Now</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <!-- Card-2 -->
+          <div class="card w-full card-side bg-base-100 shadow-xl p-8 grid lg:flex">
+            <figure class="lg:w-2/3 border-0 rounded-bl-2xl">
+              <img
+                src="./assets/feni.png"
+                alt="Movie"  class="w-full"/>
+            </figure>
+            <div class="card-body w-full">
+                <div class="relative grid gap-6">
+                    <div class="flex gap-2 bg-doller-color p-2 rounded-xl w-2/3 lg:w-1/4 ">
+                      <img src="./assets/coin.png" alt="">
+                      <p class="text-xl font-bold text-gray-800"><span id="balanceid2">433.00</span> BDT</p>
+                    </div>
+                    <h1 class="text-xl lg:text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                    <p class="text-lg font-normal">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                    <input
+                      type="number"
+                      id="donation-amount2"
+                      class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 h-[50px]"
+                      placeholder="Write Donation Amount"
+                    />
+                    <div class="card-actions justify-center">
+                        <button class="btn w-full bg-button-color text-black text-lg font-bold" id="donateNow1">Donate Now</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <!-- Card-3 -->
+          <div class="card w-full card-side bg-base-100 shadow-xl p-8 grid lg:flex">
+            <figure class="lg:w-2/3 border-0 rounded-bl-2xl">
+              <img
+                src="./assets/quota-protest.png"
+                alt="Movie"  class="w-full"/>
+            </figure>
+            <div class="card-body w-full">
+                <div class="relative grid gap-6">
+                    <div class="flex gap-2 bg-doller-color p-2 rounded-xl w-2/3 lg:w-1/4 ">
+                      <img src="./assets/coin.png" alt="">
+                      <p class="text-xl font-bold text-gray-800"><span id="balanceid3">800.00</span> BDT</p>
+                    </div>
+                    <h1 class="text-xl lg:text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
+                    <p class="text-lg font-normal">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                    <input
+                      type="number"
+                      id="donation-amount3"
+                      class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 h-[50px]"
+                      placeholder="Write Donation Amount"
+                    />
+                    <div class="card-actions justify-center">
+                        <button class="btn w-full bg-button-color text-black text-lg font-bold" id="donateNow2">Donate Now</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </section>
+        <!-- History -->
+        <section id="historyItem hidden">
+
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
