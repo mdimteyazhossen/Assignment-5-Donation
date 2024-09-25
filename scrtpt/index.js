@@ -3,7 +3,7 @@ let card1=400.00;
 let card2=433;
 let card3=800;
 const money1=document.getElementById("balance-amount");
-// History item
+// History item and Common function
 function historyitem(a,b){
     const history= document.createElement("div");
     history.className=
