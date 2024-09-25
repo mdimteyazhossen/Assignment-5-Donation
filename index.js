@@ -18,6 +18,9 @@ function historyitem(a,b){
     const historyContainer=document.getElementById('historyItem');
     historyContainer.appendChild(history);   
 }
+// modal
+const modal = document.querySelector('#modal');
+const closeModal= document.querySelector('.close-button')
 // Card-1
 const donation1 = document.getElementById("donateNow");
 donation1.addEventListener("click",function(){
@@ -32,6 +35,11 @@ donation1.addEventListener("click",function(){
         const history="famine-2024 at Noakhali, "
         
         historyitem(donationAmount1,history);
+        historyitems.classList.add('hidden');
+        modal.showModal();
+        closeModal.addEventListener('click',function(){
+            modal.close();
+        })
     }
     else if(money<1){
         alert("Sorry, Your have't enough money ...");
@@ -54,6 +62,11 @@ donation2.addEventListener("click",function(){
         const history=" Flood Relief in Feni, "
         
         historyitem(donationAmount2,history);
+        historyitems.classList.add('hidden');
+        modal.showModal();
+        closeModal.addEventListener('click',function(){
+            modal.close();
+        })
     }
     else if(money<1){
         alert("Sorry, Your have't enough money ...");
@@ -76,6 +89,11 @@ donation3.addEventListener("click",function(){
         const history=" Aid for Injured in the Quota Movement, "
         
         historyitem(donationAmount3,history);
+        historyitems.classList.add('hidden');
+        modal.showModal();
+        closeModal.addEventListener('click',function(){
+            modal.close();
+        })
     }
     else if(money<1){
         alert("Sorry, Your have't enough money ...");
