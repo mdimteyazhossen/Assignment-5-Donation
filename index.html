@@ -31,8 +31,8 @@
     </script>
 </head>
 <body>
-    <header>
-      <div class="grid justify-center gap-3 mx-auto lg:flex navbar bg-base-100 fixed z-10 lg:h-[150px] backdrop-contrast-50 bg-header-background/95">
+    <header class="grid gap-3 mx-auto navbar bg-base-100 fixed z-10 h-[400px] lg:h-[400px] backdrop-contrast-50 bg-header-white/95">
+      <div class="grid justify-center gap-3 mx-auto lg:flex navbar backdrop-contrast-50 bg-base-100  bg-header-background/95 h-[200px] lg:h-[130px]">
         <div class="text-center  navbar-start ml-[10%]">
           <a href="./blog.html"><button
               id="blog-tab"
@@ -52,27 +52,27 @@
           </div>
         </div>
       </div>
+      <!-- Tabs for Donation and History -->
+      <section >
+        <div class="grid lg:flex justify-center mb-6 gap-5 mx-auto">
+          <button
+            id="donation-tab"
+            class="w-[200px] h-[60px] py-2 rounded-l-md focus:outline-none transition-colors duration-200  font-semibold bg-gradient-to-r text-3xl bg-button-color border-2 border-black"
+          >
+            Donation
+          </button>
+          <button
+            id="history-tab"
+            class="w-[200px] h-[60px] py-2 text-3xl rounded-r-md focus:outline-none transition-colors duration-200 text-gray-600 font-semibold border-2 border-black"
+          >
+            History
+          </button>
+      </div>
+      </section>
     </header>
-    <main>
-        <!-- Tabs for Donation and History -->
-        <section class="pt-[210px] lg:pt-[180px] ">
-          <div class="flex justify-center mb-6 gap-5">
-            <button
-              id="donation-tab"
-              class="w-[200px] h-[60px] py-2 rounded-l-md focus:outline-none transition-colors duration-200  font-semibold bg-gradient-to-r text-3xl bg-button-color"
-            >
-              Donation
-            </button>
-            <button
-              id="history-tab"
-              class="w-[200px] h-[60px] py-2 text-3xl rounded-r-md focus:outline-none transition-colors duration-200 text-gray-600 font-semibold"
-            >
-              History
-            </button>
-        </div>
-        </section>
+    <main class="pt-[310px] lg:pt-[300px]  ">
         <!-- cards -->
-        <section class="w-full lg:w-[80%] mx-auto grid  gap-8 " id="dona">
+        <section class="w-full lg:w-[80%] mx-auto grid  gap-8 mt-[200px]" id="dona">
           <!-- Card-1 -->
           <div class="card w-full card-side bg-base-100 shadow-xl p-8 grid lg:flex border-4">
             <figure class="lg:w-2/3 border-0 rounded-bl-2xl">
@@ -156,7 +156,7 @@
           </div>
         </section>
         <!-- History -->
-        <section id="historyItem">
+        <section id="historyItem" class=" mt-[200px]">
         </section>
         <!-- Modal -->
         <section>
